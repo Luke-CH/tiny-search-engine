@@ -1,20 +1,15 @@
-# CS50 TSE Querier
+# CS50 TSE 
 ## Luke Crawford Hovis (Luke-CH)
 
-The assignment and Specs are in a [public repo](https://github.com/cs50winter2022/labs/tse).
-Do not clone that repo; view it on GitHub.
-Watch there for any commits that may represent updates to the assignment or specs.
+### querier
+The querier prints the set of documents that contain all the words in the query in decreasing order by score, where the score is the number of occurrences of a word in a document. 'and' and 'or' are treated as operators, returning the intersection or union of search terms respectively. 
 
-Add here any assumptions you made while writing the crawler, any ways in which your implementation differs from the three Specs, or any ways in which you know your implementation fails to work.
+The querier handles error cases where any combination of 'and' or 'or' are adjacent or if one of these operators starts or ends a query. 
 
-### Level Implemented
-I implemented the highest level of this lab, handling operators appropriately and returning results in ranked order. 
+### Usage
 
-### Assumptions
-I make no assumptions beyond those that were enumerated in the specs
+The querier must always receive two arguments.
 
-### Known Bugs
-No Known bugs :)
-
-### Previous Submission
-I commited last night as I thought my implementation worked, but I realized today areas in which it was lacking. I decided to take the late penalty and submit a fully functional lab rather than let my previous one stand. My appologies if this caused any confusion/disruption.
+```
+./querier pageDirectory indexFilename
+```
